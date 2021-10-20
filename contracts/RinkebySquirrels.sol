@@ -18,16 +18,17 @@ contract RinkebySquirrels is Ownable, ERC721Enumerable {
 
     Counters.Counter private _tokenIds;
 
-    uint public constant MAX_SUPPLY = 5714;
+    uint public constant MAX_SUPPLY = 5555;
     uint public constant PRICE = 0.01 ether;
     uint public constant MAX_PER_MINT = 10;
 
     string public baseTokenURI;
-    string public RSQProvenance; // IPFS Provenance for Rinkeby Squirrels
+    // IPFS Provenance for Rinkeby Squirrels
+    string public RSQProvenance = '581a230809e1beb64d3109c5f23b0cff3bbd3245657c49436ca8987694da5755'; 
 
     bool public saleIsActive = false;
 
-    constructor(string memory baseURI) ERC721("Rinkeby Squirrels Test", "RSQT") {
+    constructor(string memory baseURI) ERC721("Rinkeby Squirrels", "RSQ") {
         setBaseURI(baseURI);
     }
 
@@ -35,9 +36,9 @@ contract RinkebySquirrels is Ownable, ERC721Enumerable {
     function reserveSquirrels() public onlyOwner {
         uint totalMinted = _tokenIds.current();
 
-        require(totalMinted.add(50) < MAX_SUPPLY, "Not enough squirrels left to reserve");
+        require(totalMinted.add(10) < MAX_SUPPLY, "Not enough squirrels left to reserve");
 
-        for (uint i = 0; i < 50; i++) {
+        for (uint i = 0; i < 10; i++) {
             _mintSingleSquirrel();
         }
     }

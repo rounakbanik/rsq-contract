@@ -24,7 +24,8 @@ const main = async () => {
     await txn.wait();
 };
 
-// Contract address: 0x94d8299c7FFfe2D7432Ff4767940a2f7CA74D063
+// Test Contract address: 0x94d8299c7FFfe2D7432Ff4767940a2f7CA74D063
+// Final Contract address: 0x29F6D2381f82E6d52ad54f403DAff421Fdb3BdA2
 
 const runMain = async () => {
     try {
