@@ -6,12 +6,6 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 
-// TODO
-// Make withdraw function more flexible
-// Make reserve function more flexible (and less hard coded)
-// Dynamic updating of base price
-// Dynamic updating of price based on ID (pre-sale, giveaway, etc.)
-
 contract RinkebySquirrels is Ownable, ERC721Enumerable {
     using SafeMath for uint256;
     using Counters for Counters.Counter;
